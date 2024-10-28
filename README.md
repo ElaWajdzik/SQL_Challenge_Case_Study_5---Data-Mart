@@ -24,8 +24,7 @@ In June 2020 - large scale supply changes were made at Data Mart. All Data Mart 
 
 ## Relationship Diagram
 
-<img src="https://github.com/ElaWajdzik/8-Week-SQL-Challenge/assets/26794982/6cdd34d8-1c23-4294-a4ad-95e45605ecb4" width="500">
-
+![Zrzut ekranu 2024-10-27 175426](https://github.com/user-attachments/assets/acaccee9-a1cd-4ec2-a566-45d733d4a48d)
 
 ## Available Data
 
