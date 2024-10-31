@@ -7,13 +7,15 @@
 --Date: 30.10.2024
 --Tool used: Microsoft SQL Server
 
+
 -- 1. What day of the week is used for each week_date value?
 
--- set Monday as a first day of the week
+-- set Monday as the first day of the week
 SET DATEFIRST 1;
 
 SELECT 
 	DATENAME(weekday, week_date) AS week_day,
+	--check how many obserwations come from this specific day
 	COUNT(*) AS number_of_rows
 FROM clean_weekly_sales
 GROUP BY DATENAME(weekday, week_date);
@@ -24,7 +26,7 @@ SELECT DISTINCT week_number
 FROM clean_weekly_sales
 ORDER BY week_number;
 
--- the missing values are in range 1 to 11 and 37 to 53
+-- the missing values range from 1 to 11 and from 37 to 53
 
 --3. How many total transactions were there for each year in the dataset?
 
@@ -40,7 +42,8 @@ ORDER BY calendar_year;
 SELECT 
 	region,
 	month_number,
-	SUM(sales) AS total_sales
+	--change the type of sales from INT to BIGINT because of the integer range
+	SUM(CAST(sales AS BIGINT)) AS total_sales
 FROM clean_weekly_sales
 GROUP BY region, month_number
 ORDER BY region, month_number;
@@ -56,17 +59,19 @@ GROUP BY platform;
 --6. What is the percentage of sales for Retail vs Shopify for each month?
 
 WITH CTE_month_platform_sales AS (
+--sales for each platform by month
 	SELECT
 		month_number,
 		platform,
-		SUM(sales) AS total_m_p_sales
+		SUM(CAST(sales AS BIGINT)) AS total_m_p_sales
 	FROM clean_weekly_sales
 	GROUP BY month_number, platform),
 	
 CTE_pivot AS (
+--the percentage of sales per platform in a month, relative to the total monthly sales
 	SELECT 
 		*,
-		CAST((total_m_p_sales / SUM(total_m_p_sales) OVER (PARTITION BY month_number)) * 100 AS NUMERIC(5,2)) AS perc_month_sales
+		CAST((total_m_p_sales * 100.0 / SUM(total_m_p_sales) OVER (PARTITION BY month_number)) AS NUMERIC(5,2)) AS perc_month_sales
 	FROM CTE_month_platform_sales)
 
 SELECT 
@@ -80,17 +85,19 @@ ORDER BY month_number;
 --7. What is the percentage of sales by demographic for each year in the dataset?
 
 WITH CTE_year_demographic_sales AS (
+--sales for each year and demographic group
 	SELECT 
 		calendar_year,
 		demographic,
-		SUM(sales) AS total_y_d_sales
+		SUM(CAST(sales AS BIGINT)) AS total_y_d_sales
 	FROM clean_weekly_sales
 	GROUP BY calendar_year, demographic),
 
 CTE_pivot AS (
+--the percentage of sales per demographic group in a year, relative to the total yearly sales
 	SELECT 
 		*,
-		CAST((total_y_d_sales / SUM(total_y_d_sales) OVER(PARTITION BY calendar_year)) * 100 AS NUMERIC(5,2)) AS perc_year_sales
+		CAST((total_y_d_sales * 100.0 / SUM(total_y_d_sales) OVER(PARTITION BY calendar_year)) AS NUMERIC(5,2)) AS perc_year_sales
 	FROM CTE_year_demographic_sales)
 
 SELECT 
@@ -105,26 +112,28 @@ ORDER BY calendar_year;
 --8. Which age_band and demographic values contribute the most to Retail sales?
 
 WITH CTE_age_demographic_sales AS (
+--sales for each demographic group and age band
 	SELECT 
 		age_band,
 		demographic,
-		SUM(sales) AS total_a_d_sales
+		SUM(CAST(sales AS BIGINT)) AS total_a_d_sales
 	FROM clean_weekly_sales
+	--filter the data to include only entries related to the Retail platform
 	WHERE platform = 'Retail'
 	GROUP BY age_band, demographic)
 
 SELECT 
 	*,
-	CAST((total_a_d_sales / SUM(total_a_d_sales) OVER ()) * 100 AS NUMERIC(5,2)) AS perc_sales
+	CAST((total_a_d_sales * 100.0 / SUM(total_a_d_sales) OVER ()) AS NUMERIC(5,2)) AS perc_sales
 FROM CTE_age_demographic_sales
-ORDER BY (total_a_d_sales / SUM(total_a_d_sales) OVER ()) * 100 DESC;
+ORDER BY (total_a_d_sales * 100.0 / SUM(total_a_d_sales) OVER ()) DESC;
 
 --9. Can we use the avg_transaction column to find the average transaction size for each year for Retail vs Shopify? If not - how would you calculate it instead?
 
 SELECT 
 	calendar_year,
 	platform,
-	CAST(SUM(sales) / SUM(transactions) AS NUMERIC(6,2)) AS avg_transaction
+	CAST(SUM(CAST(sales AS BIGINT)) * 1.0 / SUM(transactions) AS NUMERIC(6,2)) AS avg_transaction
 FROM clean_weekly_sales
 GROUP BY calendar_year, platform
 ORDER BY platform, calendar_year;
