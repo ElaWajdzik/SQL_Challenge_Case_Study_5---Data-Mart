@@ -43,16 +43,17 @@ SELECT
 	MONTH(clean_week_date),
 	YEAR(clean_week_date),
 	--expand the age band information using details from the segment column
-	CASE	
-		WHEN segment LIKE '%1' THEN 'Young Adults'
-		WHEN segment LIKE '%2' THEN 'Middle Aged'
-		WHEN segment LIKE '%3' OR segment LIKE '%4' THEN 'Retirees'
+	CASE RIGHT(segment,1)
+		WHEN '1' THEN 'Young Adults'
+		WHEN '2'THEN 'Middle Aged'
+		WHEN '3'THEN 'Retirees'
+		WHEN '4'THEN 'Retirees'
 		ELSE 'unknown'
 	END,
 	--expand demographic group information using details from the segment column.
-	CASE
-		WHEN segment LIKE 'C%' THEN 'Couples'
-		WHEN segment LIKE 'F%' THEN 'Families'
+	CASE LEFT(segment,1)
+		WHEN 'C' THEN 'Couples'
+		WHEN 'F' THEN 'Families'
 		ELSE 'unknown'
 	END,
 	--calculate the average transaction value and convert the result to NUMERIC format
