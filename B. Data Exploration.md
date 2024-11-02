@@ -31,16 +31,16 @@ ORDER BY week_number;
 ```
 #### Result:
 
- | week_number
---
-12
-13
-14
-15
-...
-34
-35
-36
+week_number |
+-- |
+12 |
+13 |
+14 |
+15 |
+... |
+34 |
+35 |
+36 |
 
 
 The missing ``week_number`` values range from 1 to 11 and from 37 to 53.
@@ -57,6 +57,7 @@ ORDER BY calendar_year;
 ```
 
 #### Result:
+![Zrzut ekranu 2024-10-31 131150](https://github.com/user-attachments/assets/375ad2df-991b-4460-9263-881f6b6f8a22)
 
 The number of transactions for each year was around 350 milion.
 
@@ -76,6 +77,9 @@ ORDER BY region, month_number;
 #### Result:
 *Sample of results only for region AFRICA*
 
+![Zrzut ekranu 2024-10-31 131455](https://github.com/user-attachments/assets/e4f00f2a-c2d3-44a4-af42-5f4a0fb27185)
+
+
 To proceed with further analysis, it is beneficial to calculate, for example, the percentage of total sales in each region or the percentage of total sales in each month. The percentage better illustrates the differences between various months and regions.
 
 ### 5. What is the total count of transactions for each platform
@@ -89,6 +93,8 @@ GROUP BY platform;
 ```
 
 #### Result:
+![Zrzut ekranu 2024-10-31 145730](https://github.com/user-attachments/assets/e0a8c430-5128-4e00-9451-b531bfa75005)
+
 
 Most transactions come from the `Retail` platform. 
 
@@ -127,6 +133,7 @@ ORDER BY month_number;
 - Displayed the information about the percentage of sales in a pivot table.
 
 #### Result:
+![Zrzut ekranu 2024-10-31 145900](https://github.com/user-attachments/assets/cebbb3db-5905-4c18-a0c2-718e01265c19)
 
 
 In every months, sales from `Retail` platform account for 97% of total sales.
@@ -166,6 +173,8 @@ ORDER BY calendar_year;
 - Displayed the percentage of sales in a pivot table.
 
 #### Result:
+![Zrzut ekranu 2024-11-02 180513](https://github.com/user-attachments/assets/e3a522cc-6feb-4219-985c-c32041147af7)
+
 
 In every year, sales from Families account for around 32% of total sales, while Couples account for about 27%. Over all three years, sales from `unknown` customers account for around 40% of total sales.
 
@@ -195,6 +204,7 @@ ORDER BY (total_a_d_sales * 100.0 / SUM(total_a_d_sales) OVER ()) DESC;
 - Calculated the percentage of total sales for each demographic group and age band.
 
 #### Result:
+![Zrzut ekranu 2024-11-02 180528](https://github.com/user-attachments/assets/5b720855-4ca4-497b-ad8b-689852c2619d)
 
 
 Apart from the `unknown` group, the largest portion of total sales comes from `Retirees` & `Families`, accounting for 16,73% of total sales. 
@@ -214,5 +224,7 @@ ORDER BY platform, calendar_year;
 The average transaction size for each platform cannot be calculated directly from the `avg_transaction` column. To calculate the average transaction size for each platform, total sales need to be divided by the total number of transactions for each platform. 
 
 #### Result:
+![Zrzut ekranu 2024-11-02 180543](https://github.com/user-attachments/assets/dca2f5e0-e163-4e93-96e3-4eac956d4865)
+
 
 The average transaction size for the Retail platform is around $36, whereas for the Shopify platform it is around $180, which is five times higher than the Retail platform. However, remember that the Shopify platform accounts for only 2-3% of total sales in each month. These two pieces of information highlight significant differences in products on each platform or in the types of customers who choose each platform.
