@@ -114,3 +114,5 @@ SELECT
 FROM CTE_weekly_sales;
 ```
 The sample of `clean_weekly_sales` table
+
+![Zrzut ekranu 2024-10-31 124214](https://github.com/user-attachments/assets/beb88ac3-d4cb-4ee6-97f9-20e0415fea9f)
