@@ -1,10 +1,7 @@
-# SQL_Challenge_Case_Study_5---Data-Mart
-
-
 I practice my SQL skills with the #8WeekSQLChallenge prepared by Danny Ma. Thank you Danny for the excellent case study.
 If you are also looking for materials to improve your SQL skills you can find it [here](https://8weeksqlchallenge.com/) and try it yourself.
 
-# <p align="center"> Case Study #3: 🛒 Data Mart
+# <p align="center"> Case Study #5: 🛒 Data Mart
 <p align="center"> <img src="https://8weeksqlchallenge.com/images/case-study-designs/5.png" alt="Image Data Mart - fresh is best" height="400">
 
 ***
@@ -49,9 +46,9 @@ week_date | region | platform | segment | customer_type | transactions | sales
 
 ## Case Study Questions
 
-- [A. Data Cleansing Steps]()
+- [A. Data Cleansing Steps](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/A.%20Data%20Cleansing%20Steps.md)
 
-- [B. Data Exploration]()
+- [B. Data Exploration](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/A.%20Data%20Exploration.md)
 
 - [C. Before & After Analysis]()
 
