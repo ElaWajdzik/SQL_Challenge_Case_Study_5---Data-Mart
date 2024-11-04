@@ -43,6 +43,7 @@ FROM clean_weekly_sales_4_weeks;
 - I calculeted the total sales before and after, the sales variance and variance percentage.
 
 #### Result:
+![Zrzut ekranu 2024-11-04 132608](https://github.com/user-attachments/assets/c5392982-9310-47d7-ae6f-934135b79e2c)
 
 According to the data, the total sales value declined over the 4-week period. The decrease amounted to 26 million, representing a 1.15% drop in value.
 
@@ -80,6 +81,8 @@ FROM clean_weekly_sales_12_weeks;
 - I calculeted the total sales before and after, the sales variance and variance percentage.
 
 #### Result:
+![Zrzut ekranu 2024-11-04 135316](https://github.com/user-attachments/assets/7636693d-d4f6-4bf5-bc0f-92372ea3ea2d)
+
 
 According to the data, the total sales value declined over the 12-week period. The decrease amounted to 152 million, representing a 2.14% drop in value.
 
@@ -116,7 +119,7 @@ ORDER BY calendar_year;
 ```
 
 #### Result:
-
+![Zrzut ekranu 2024-11-04 155644](https://github.com/user-attachments/assets/17d4c534-4c8b-4a71-9b46-37db902d62dc)
 
 
 
@@ -149,5 +152,6 @@ GROUP BY calendar_year
 ORDER BY calendar_year;
 ```
 
-#### Result:
 
+#### Result:
+![Zrzut ekranu 2024-11-04 155552](https://github.com/user-attachments/assets/ce0cb0ec-85a7-406c-baef-431f51fe887d)
