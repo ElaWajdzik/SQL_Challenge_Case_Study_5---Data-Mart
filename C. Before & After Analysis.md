@@ -45,7 +45,7 @@ FROM clean_weekly_sales_4_weeks;
 #### Result:
 ![Zrzut ekranu 2024-11-04 132608](https://github.com/user-attachments/assets/c5392982-9310-47d7-ae6f-934135b79e2c)
 
-According to the data, the total sales value declined over the 4-week period. The decrease amounted to 26 million, representing a 1.15% drop in value.
+According to the data, total sales decreased in the 4-week period following the packaging change, with a decline of approximately 26.9 million, representing a 1.15% reduction in sales. The implemented change may have contributed to a decrease in revenue; however, to confirm this, we would need more data or an analysis of historical sales data from similar periods to assess the impact of seasonality on sales during the studied timeframe.
 
 ### 2. What about the entire 12 weeks before and after?
 
@@ -86,6 +86,8 @@ FROM clean_weekly_sales_12_weeks;
 
 According to the data, the total sales value declined over the 12-week period. The decrease amounted to 152 million, representing a 2.14% drop in value.
 
+According to the data, total sales decreased in the 12-week period following the packaging change, with a decline of approximately 152.3 million, representing a 2.14% reduction in sales. The implemented change may have contributed to a decrease in revenue; however, to confirm this, we would need an analysis of historical sales data from similar periods to assess the impact of seasonality on sales during the studied timeframe.
+
 
 ### 3. How do the sale metrics for these 2 periods before and after compare with the previous years in 2018 and 2019?
 
@@ -121,7 +123,7 @@ ORDER BY calendar_year;
 #### Result:
 ![Zrzut ekranu 2024-11-04 155644](https://github.com/user-attachments/assets/17d4c534-4c8b-4a71-9b46-37db902d62dc)
 
-
+According to the data, in the corresponding periods of 2018 and 2019, total sales experienced minor fluctuations (-0.2% in 2018 and 0.1% in 2019). However, in 2020, we observed a decline of 1.15% (which corresponds to a sales decrease of 27 million) during the studied period. The recorded difference in sales in 2020 is likely not a result of seasonality but rather a consequence of another change, potentially related to sustainable packaging changes.
 
 ```sql
 --12-week period
