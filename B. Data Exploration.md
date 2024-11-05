@@ -200,8 +200,8 @@ ORDER BY (total_a_d_sales * 100.0 / SUM(total_a_d_sales) OVER ()) DESC;
 ```
 
 #### Steps:
-- Calculated the total sales for each demographic group and age band based on the data from `Retail` platform. 
-- Calculated the percentage of total sales for each demographic group and age band.
+- Calculated the total sales for each unique combination of `age_band` and `demographic` for the `Retail` platform. 
+- Computed each combination’s percentage of the total Retail sales, ordering results by descending percentage, so the most significant contributors appear at the top.
 
 #### Result:
 ![Zrzut ekranu 2024-11-02 180528](https://github.com/user-attachments/assets/5b720855-4ca4-497b-ad8b-689852c2619d)
