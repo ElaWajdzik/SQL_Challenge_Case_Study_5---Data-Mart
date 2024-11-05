@@ -84,8 +84,6 @@ FROM clean_weekly_sales_12_weeks;
 ![Zrzut ekranu 2024-11-04 135316](https://github.com/user-attachments/assets/7636693d-d4f6-4bf5-bc0f-92372ea3ea2d)
 
 
-According to the data, the total sales value declined over the 12-week period. The decrease amounted to 152 million, representing a 2.14% drop in value.
-
 According to the data, total sales decreased in the 12-week period following the packaging change, with a decline of approximately 152.3 million, representing a 2.14% reduction in sales. The implemented change may have contributed to a decrease in revenue; however, to confirm this, we would need an analysis of historical sales data from similar periods to assess the impact of seasonality on sales during the studied timeframe.
 
 
@@ -124,6 +122,8 @@ ORDER BY calendar_year;
 ![Zrzut ekranu 2024-11-04 155644](https://github.com/user-attachments/assets/17d4c534-4c8b-4a71-9b46-37db902d62dc)
 
 According to the data, in the corresponding periods of 2018 and 2019, total sales experienced minor fluctuations (-0.2% in 2018 and 0.1% in 2019). However, in 2020, we observed a decline of 1.15% (which corresponds to a sales decrease of 27 million) during the studied period. The recorded difference in sales in 2020 is likely not a result of seasonality but rather a consequence of another change, potentially related to sustainable packaging changes.
+
+<br></br>
 
 ```sql
 --12-week period
