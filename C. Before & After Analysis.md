@@ -157,3 +157,14 @@ ORDER BY calendar_year;
 
 #### Result:
 ![Zrzut ekranu 2024-11-04 155552](https://github.com/user-attachments/assets/ce0cb0ec-85a7-406c-baef-431f51fe887d)
+
+Upon examining the historical data, a consistent trend emerges over the past three years: total sales in the `after period` remain relatively stable (around 6.5 to 7 billion). In contrast, the `before period` shows notable fluctuations in sales values, ranging from 5.9 to 7.1 billion. These large variations in sales during the 12 weeks in the `before period` have a direct impact on the percentage change when comparing the after period to the before period.
+
+Based on the available data, we can speculate that the implemented change may be having a negative effect on total sales. However, it would be valuable to further investigate the `before period` to understand the significant shifts in sales that have occurred in recent years between the 12th and 24th weeks.
+
+<br></br>
+***
+
+Thank you for your attention! 🫶️
+
+[Back to README ➔](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/README.md)
