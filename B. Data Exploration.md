@@ -228,3 +228,12 @@ The average transaction size for each platform cannot be calculated directly fro
 
 
 The average transaction size for the Retail platform is around $36, whereas for the Shopify platform it is around $180, which is five times higher than the Retail platform. However, remember that the Shopify platform accounts for only 2-3% of total sales in each month. These two pieces of information highlight significant differences in products on each platform or in the types of customers who choose each platform.
+
+<br></br>
+***
+
+Thank you for your attention! 🫶️
+
+[Next Section: *Before & After Analysis* ➔](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/C.%20Before%20%26%20After%20Analysis.md)
+
+[Return to README ➔](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/README.md)

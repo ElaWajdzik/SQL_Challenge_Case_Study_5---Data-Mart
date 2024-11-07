@@ -50,9 +50,9 @@ week_date | region | platform | segment | customer_type | transactions | sales
 
 - [B. Data Exploration](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/A.%20Data%20Exploration.md)
 
-- [C. Before & After Analysis]()
+- [C. Before & After Analysis](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/C.%20Before%20%26%20After%20Analysis.md)
 
-- [D. Bonus Question]()
+- [D. Bonus Question](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/D.%20Bonus%20Question.md)
 
 <br/>
 

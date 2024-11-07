@@ -167,4 +167,6 @@ Based on the available data, we can speculate that the implemented change may be
 
 Thank you for your attention! 🫶️
 
-[Back to README ➔](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/README.md)
+[Next Section: *Bonus Question* ➔](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/C.%20Before%20%26%20After%20Analysis.md)
+
+[Return to README ➔](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/README.md)

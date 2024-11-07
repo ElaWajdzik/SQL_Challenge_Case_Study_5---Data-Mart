@@ -116,3 +116,13 @@ FROM CTE_weekly_sales;
 The sample of `clean_weekly_sales` table
 
 ![Zrzut ekranu 2024-10-31 124214](https://github.com/user-attachments/assets/beb88ac3-d4cb-4ee6-97f9-20e0415fea9f)
+
+<br></br>
+***
+
+Thank you for your attention! 🫶️
+
+[Next Section: *Data Exploration* ➔](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/B.%20Data%20Exploration.md)
+
+[Return to README ➔](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/README.md)
+
