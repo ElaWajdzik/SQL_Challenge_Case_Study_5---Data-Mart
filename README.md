@@ -54,6 +54,17 @@ week_date | region | platform | segment | customer_type | transactions | sales
 
 - [D. Bonus Question](https://github.com/ElaWajdzik/SQL_Challenge_Case_Study_5---Data-Mart/blob/main/D.%20Bonus%20Question.md)
 
+
+## SQL Skills Gained
+- Aggregations - functions like `COUNT()`, `SUM()`, `AVG()`, `MIN()`, `MAX()` to summarize data and perform calculations over grouped records;
+- Joins - different types of joins (`INNER JOIN`, `LEFT JOIN`, `RIGHT JON`, `FULL JOIN`) to combine data from multiple tables;
+- Window Functions (`ROW_NUMBER`, `DENSE_RANK`);
+- `CASE WHEN` Statements;
+- Data Cleaning/Preparation - SQL functions, such as `TRIM()`, `REPLACE()`, `COALESCE()`;
+- Filtering and Sorting;
+- Group By & Having Clauses;
+- Data Transformation - such as `CAST()` and `CONVERT()` to change data types;
+
 <br/>
 
 *** 
